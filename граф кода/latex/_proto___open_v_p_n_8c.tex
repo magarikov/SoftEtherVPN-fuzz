@@ -1,0 +1,1072 @@
+\doxysection{Proto\+\_\+\+Open\+VPN.\+c File Reference}
+\hypertarget{_proto___open_v_p_n_8c}{}\label{_proto___open_v_p_n_8c}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+{\ttfamily \+\#include "{}Proto\+\_\+\+Open\+VPN.\+h"{}}\newline
+{\ttfamily \+\#include "{}Cedar.\+h"{}}\newline
+{\ttfamily \+\#include "{}Connection.\+h"{}}\newline
+{\ttfamily \+\#include "{}IPC.\+h"{}}\newline
+{\ttfamily \+\#include "{}Logging.\+h"{}}\newline
+{\ttfamily \+\#include "{}Proto\+\_\+\+Ether\+IP.\+h"{}}\newline
+{\ttfamily \+\#include "{}Proto\+\_\+\+PPP.\+h"{}}\newline
+{\ttfamily \+\#include "{}Server.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mayaqua/\+\+Internat.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mayaqua/\+\+Memory.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mayaqua/\+\+Object.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mayaqua/\+\+Str.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mayaqua/\+\+Table.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mayaqua/\+\+Tick64.\+h"{}}\newline
+Include dependency graph for Proto\+\_\+\+Open\+VPN.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const PROTO\+\_\+\+IMPL \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_aa40d6d67f978e9a496bf7fc3ecb00b53}{Ovs\+Get\+Proto\+Impl}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_ac1694bce99fc371a378ea096b4016602}{Ovs\+Name}} ()
+\item 
+const PROTO\+\_\+\+OPTION \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a235d43a3d7cff7c4dee722eb869aaaf8}{Ovs\+Options}} ()
+\item 
+bool \doxymbox{\hyperlink{_proto___open_v_p_n_8c_ac5fe0be86528f6583a4fa476f2826e90}{Ovs\+Init}} (void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}param, const LIST \texorpdfstring{$\ast$}{*}options, CEDAR \texorpdfstring{$\ast$}{*}cedar, INTERRUPT\+\_\+\+MANAGER \texorpdfstring{$\ast$}{*}im, SOCK\+\_\+\+EVENT \texorpdfstring{$\ast$}{*}se, const char \texorpdfstring{$\ast$}{*}cipher, const char \texorpdfstring{$\ast$}{*}hostname)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a2c884b4905125a40e85d0c51ced2a2c7}{Ovs\+Free}} (void \texorpdfstring{$\ast$}{*}param)
+\item 
+bool \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a407ee536fca7e7d24021bfd4400381db}{Ovs\+Is\+Packet\+For\+Me}} (const PROTO\+\_\+\+MODE mode, const void \texorpdfstring{$\ast$}{*}data, const UINT size)
+\item 
+bool \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a3a0ee42a418fb5b9759b24b8b145f97d}{Ovs\+Process\+Data}} (void \texorpdfstring{$\ast$}{*}param, TCP\+\_\+\+RAW\+\_\+\+DATA \texorpdfstring{$\ast$}{*}in, FIFO \texorpdfstring{$\ast$}{*}out)
+\item 
+bool \doxymbox{\hyperlink{_proto___open_v_p_n_8c_aa0c78fb58ae75b8238b9bdd55f02475d}{Ovs\+Process\+Datagrams}} (void \texorpdfstring{$\ast$}{*}param, LIST \texorpdfstring{$\ast$}{*}in, LIST \texorpdfstring{$\ast$}{*}out)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a5ebe55982e98740d0f5dcba82a32117a}{Ovs\+Log}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, char \texorpdfstring{$\ast$}{*}name,...)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a34f1bddc7edc9b9c433e555dc81a58da}{Ovs\+Encrypt}} (CIPHER \texorpdfstring{$\ast$}{*}cipher, MD \texorpdfstring{$\ast$}{*}md, UCHAR \texorpdfstring{$\ast$}{*}iv, UCHAR \texorpdfstring{$\ast$}{*}tag, UCHAR \texorpdfstring{$\ast$}{*}dest, UCHAR \texorpdfstring{$\ast$}{*}src, UINT src\+\_\+size, UCHAR \texorpdfstring{$\ast$}{*}aad, UINT aad\+\_\+size)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_af575971cd11582b3608f8bc6fdabdb10}{Ovs\+Decrypt}} (CIPHER \texorpdfstring{$\ast$}{*}cipher, MD \texorpdfstring{$\ast$}{*}md, UCHAR \texorpdfstring{$\ast$}{*}iv, UCHAR \texorpdfstring{$\ast$}{*}dest, UCHAR \texorpdfstring{$\ast$}{*}src, UINT size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a3db300cd278a9115b7a17c2de2ce8505}{Ovs\+Data\+Xor\+Mask}} (void \texorpdfstring{$\ast$}{*}data, const UINT data\+\_\+size, const char \texorpdfstring{$\ast$}{*}mask, const UINT mask\+\_\+size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a8a3e60f1d3637ec7bfe5538daafa4e2d}{Ovs\+Data\+Xor\+Ptr\+Pos}} (void \texorpdfstring{$\ast$}{*}data, const UINT size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a2066e61616ceecf05d8e6f3d58295c46}{Ovs\+Data\+Reverse}} (void \texorpdfstring{$\ast$}{*}data, const UINT size)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a772afcf0adfb1e25ae0bc6dceaaa7cb6}{Ovs\+Detect\+Obfuscation}} (void \texorpdfstring{$\ast$}{*}data, UINT size, char \texorpdfstring{$\ast$}{*}xormask)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a2eabf421c04bb7c2d667a9b9b19abe40}{Ovs\+Procecc\+Recv\+Packet}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, UDPPACKET \texorpdfstring{$\ast$}{*}p, UINT protocol)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a9fab46e51d6e429068b8149f2c68a6bc}{Ovs\+Delete\+From\+Sending\+Control\+Packet\+List}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, UINT num\+\_\+acks, UINT \texorpdfstring{$\ast$}{*}acks)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a1f64902f27656f97792caa898dbc0a4c}{Ovs\+Process\+Recv\+Control\+Packet}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}p)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_af04a2a9c7564afca5e8beab059839365}{Ovs\+Calc\+Tcp\+Mss}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_ae8c712c80fdd69d983bb2b644f792df3}{Ovs\+Begin\+IPCAsync\+Connection\+If\+Empty}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a9699836bafc5f6ca6019e6102b9a11cc}{Ovs\+Peek\+String\+From\+Fifo}} (FIFO \texorpdfstring{$\ast$}{*}f, char \texorpdfstring{$\ast$}{*}str, UINT str\+\_\+size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a42f23f778e5b4051fb821caae06608e1}{Ovs\+Setup\+Session\+Parameters}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, OPENVPN\+\_\+\+KEY\+\_\+\+METHOD\+\_\+2 \texorpdfstring{$\ast$}{*}data)
+\item 
+CIPHER \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a91137e4cd20cc53108c3b017f064d732}{Ovs\+Get\+Cipher}} (char \texorpdfstring{$\ast$}{*}name)
+\item 
+MD \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a1d0c8bdc2da1100471838339c5e0928c}{Ovs\+Get\+Md}} (char \texorpdfstring{$\ast$}{*}name)
+\item 
+BUF \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_abc31054a36fa047f635b8cb2006d1f09}{Ovs\+Build\+Key\+Method2}} (OPENVPN\+\_\+\+KEY\+\_\+\+METHOD\+\_\+2 \texorpdfstring{$\ast$}{*}d)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a4a0651c09c7d9866cf4dbfa878500972}{Ovs\+Write\+String\+To\+Buf}} (BUF \texorpdfstring{$\ast$}{*}b, char \texorpdfstring{$\ast$}{*}str, UINT max\+\_\+size)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a88a8b6c1e4864be15197a1814de2357f}{Ovs\+Parse\+Key\+Method2}} (OPENVPN\+\_\+\+KEY\+\_\+\+METHOD\+\_\+2 \texorpdfstring{$\ast$}{*}ret, UCHAR \texorpdfstring{$\ast$}{*}data, UINT size, bool client\+\_\+mode)
+\item 
+bool \doxymbox{\hyperlink{_proto___open_v_p_n_8c_afa16d8c4e344b8dec626bf55c8f6606b}{Ovs\+Read\+String\+From\+Buf}} (BUF \texorpdfstring{$\ast$}{*}b, char \texorpdfstring{$\ast$}{*}str, UINT str\+\_\+size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_acd06b08cdbe43a14d0e853c52c2980a4}{Ovs\+Send\+Control\+Packet\+With\+Auto\+Split}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, UCHAR opcode, UCHAR \texorpdfstring{$\ast$}{*}data, UINT data\+\_\+size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a453f61207a9e9b529579dcc5ed52e509}{Ovs\+Send\+Control\+Packet}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, UCHAR opcode, UCHAR \texorpdfstring{$\ast$}{*}data, UINT data\+\_\+size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a99186f8fd6cf5c4b7bdda40febeaada5}{Ovs\+Send\+Control\+Packet\+Ex}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, UCHAR opcode, UCHAR \texorpdfstring{$\ast$}{*}data, UINT data\+\_\+size, bool no\+\_\+resend)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a8d88a0251f36896b4276aa1bc3cc4c45}{Ovs\+Free\+Control\+Packet}} (OPENVPN\+\_\+\+CONTROL\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}p)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_acfbaf9126d7c150ffa1007a1f413efe2}{Ovs\+Get\+Ack\+Reply\+List}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, UINT \texorpdfstring{$\ast$}{*}ret)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a0335ef84eff063684902ea467ead8784}{Ovs\+Free\+Channel}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c)
+\item 
+OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a8eb80307e0f4a9bee8beafa817106dbd}{Ovs\+New\+Channel}} (OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, UCHAR key\+\_\+id)
+\item 
+UINT64 \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a8c49dc0fff2793e2949b8da2301cd25b}{Ovs\+New\+Server\+Session\+Id}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_abe7d0a579e657ab2759cdabb63b3c176}{Ovs\+Send\+Data\+Packet}} (OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}c, UCHAR key\+\_\+id, UINT data\+\_\+packet\+\_\+id, void \texorpdfstring{$\ast$}{*}data, UINT data\+\_\+size)
+\item 
+BUF \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_acc86768d8ab1e2c329a0fbb9c010a9e8}{Ovs\+Build\+Packet}} (OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}p)
+\item 
+OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a08f227c666ed5579b89e74317f6d415a}{Ovs\+Parse\+Packet}} (UCHAR \texorpdfstring{$\ast$}{*}data, UINT size)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a7ca15bf58cb6b5668454c56403ad583c}{Ovs\+Free\+Packet}} (OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}p)
+\item 
+OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_abde32438d15d2e8d34a8dc87b8354bad}{Ovs\+Find\+Or\+Create\+Session}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, IP \texorpdfstring{$\ast$}{*}server\+\_\+ip, UINT server\+\_\+port, IP \texorpdfstring{$\ast$}{*}client\+\_\+ip, UINT client\+\_\+port, UINT protocol)
+\item 
+UINT \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a3142c1e6351882d83db2583a4863da0a}{Ovs\+Get\+Num\+Session\+By\+Client\+Ip}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, IP \texorpdfstring{$\ast$}{*}ip)
+\item 
+OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a153d15a1b88d4c52bcac5db5563cb07c}{Ovs\+New\+Session}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, IP \texorpdfstring{$\ast$}{*}server\+\_\+ip, UINT server\+\_\+port, IP \texorpdfstring{$\ast$}{*}client\+\_\+ip, UINT client\+\_\+port, UINT protocol)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a5c5c1bfa973756b1d30262d36b8afdeb}{Ovs\+Free\+Session}} (OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se)
+\item 
+OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_aaae07b6584db45136f09de18169c3cf0}{Ovs\+Search\+Session}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, IP \texorpdfstring{$\ast$}{*}server\+\_\+ip, UINT server\+\_\+port, IP \texorpdfstring{$\ast$}{*}client\+\_\+ip, UINT client\+\_\+port, UINT protocol)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a951cd3be779aab193849eeb7d2c75015}{Ovs\+Recv\+Packet}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, LIST \texorpdfstring{$\ast$}{*}recv\+\_\+packet\+\_\+list, UINT protocol)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_aee2c17a1d6c7b3a8a52986e178e736ad}{Ovs\+Send\+Packet\+Now}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}p)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_af2bffca218a7981df56dcdca3fe72caa}{Ovs\+Send\+Packet\+Raw\+Now}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s, OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}se, void \texorpdfstring{$\ast$}{*}data, UINT size)
+\item 
+OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_af6324b811fbb2a708cee2d38f9ddf62b}{Ovs\+New\+Control\+Packet}} (UCHAR opcode, UCHAR key\+\_\+id, UINT64 my\+\_\+channel\+\_\+id, UINT num\+\_\+ack, UINT \texorpdfstring{$\ast$}{*}ack\+\_\+packet\+\_\+ids, UINT64 your\+\_\+channel\+\_\+id, UINT packet\+\_\+id, UINT data\+\_\+size, UCHAR \texorpdfstring{$\ast$}{*}data)
+\item 
+int \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a65a542a520710fe07108d721fdceec8d}{Ovs\+Compare\+Session\+List}} (void \texorpdfstring{$\ast$}{*}p1, void \texorpdfstring{$\ast$}{*}p2)
+\item 
+OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_proto___open_v_p_n_8c_aa35bda9cb1714a1426d14d99b22eff6c}{New\+Open\+Vpn\+Server}} (const LIST \texorpdfstring{$\ast$}{*}options, CEDAR \texorpdfstring{$\ast$}{*}cedar, INTERRUPT\+\_\+\+MANAGER \texorpdfstring{$\ast$}{*}interrupt, SOCK\+\_\+\+EVENT \texorpdfstring{$\ast$}{*}sock\+\_\+event)
+\item 
+void \doxymbox{\hyperlink{_proto___open_v_p_n_8c_a1e421bb2ed6fa0b298fdf709c051a6b8}{Free\+Open\+Vpn\+Server}} (OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}s)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_proto___open_v_p_n_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_proto___open_v_p_n_8c_a1e421bb2ed6fa0b298fdf709c051a6b8}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!FreeOpenVpnServer@{FreeOpenVpnServer}}
+\index{FreeOpenVpnServer@{FreeOpenVpnServer}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{FreeOpenVpnServer()}{FreeOpenVpnServer()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a1e421bb2ed6fa0b298fdf709c051a6b8} 
+void Free\+Open\+Vpn\+Server (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a1e421bb2ed6fa0b298fdf709c051a6b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a1e421bb2ed6fa0b298fdf709c051a6b8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_aa35bda9cb1714a1426d14d99b22eff6c}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!NewOpenVpnServer@{NewOpenVpnServer}}
+\index{NewOpenVpnServer@{NewOpenVpnServer}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{NewOpenVpnServer()}{NewOpenVpnServer()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_aa35bda9cb1714a1426d14d99b22eff6c} 
+OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*} New\+Open\+Vpn\+Server (\begin{DoxyParamCaption}\item[{const LIST \texorpdfstring{$\ast$}{*}}]{options}{, }\item[{CEDAR \texorpdfstring{$\ast$}{*}}]{cedar}{, }\item[{INTERRUPT\+\_\+\+MANAGER \texorpdfstring{$\ast$}{*}}]{interrupt}{, }\item[{SOCK\+\_\+\+EVENT \texorpdfstring{$\ast$}{*}}]{sock\+\_\+event}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{_proto___open_v_p_n_8c_aa35bda9cb1714a1426d14d99b22eff6c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_aa35bda9cb1714a1426d14d99b22eff6c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_ae8c712c80fdd69d983bb2b644f792df3}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsBeginIPCAsyncConnectionIfEmpty@{OvsBeginIPCAsyncConnectionIfEmpty}}
+\index{OvsBeginIPCAsyncConnectionIfEmpty@{OvsBeginIPCAsyncConnectionIfEmpty}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsBeginIPCAsyncConnectionIfEmpty()}{OvsBeginIPCAsyncConnectionIfEmpty()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_ae8c712c80fdd69d983bb2b644f792df3} 
+void Ovs\+Begin\+IPCAsync\+Connection\+If\+Empty (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_ae8c712c80fdd69d983bb2b644f792df3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_ae8c712c80fdd69d983bb2b644f792df3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_abc31054a36fa047f635b8cb2006d1f09}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsBuildKeyMethod2@{OvsBuildKeyMethod2}}
+\index{OvsBuildKeyMethod2@{OvsBuildKeyMethod2}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsBuildKeyMethod2()}{OvsBuildKeyMethod2()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_abc31054a36fa047f635b8cb2006d1f09} 
+BUF \texorpdfstring{$\ast$}{*} Ovs\+Build\+Key\+Method2 (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+KEY\+\_\+\+METHOD\+\_\+2 \texorpdfstring{$\ast$}{*}}]{d}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_proto___open_v_p_n_8c_abc31054a36fa047f635b8cb2006d1f09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_abc31054a36fa047f635b8cb2006d1f09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_acc86768d8ab1e2c329a0fbb9c010a9e8}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsBuildPacket@{OvsBuildPacket}}
+\index{OvsBuildPacket@{OvsBuildPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsBuildPacket()}{OvsBuildPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_acc86768d8ab1e2c329a0fbb9c010a9e8} 
+BUF \texorpdfstring{$\ast$}{*} Ovs\+Build\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_acc86768d8ab1e2c329a0fbb9c010a9e8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_af04a2a9c7564afca5e8beab059839365}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsCalcTcpMss@{OvsCalcTcpMss}}
+\index{OvsCalcTcpMss@{OvsCalcTcpMss}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsCalcTcpMss()}{OvsCalcTcpMss()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_af04a2a9c7564afca5e8beab059839365} 
+UINT Ovs\+Calc\+Tcp\+Mss (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_af04a2a9c7564afca5e8beab059839365_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a65a542a520710fe07108d721fdceec8d}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsCompareSessionList@{OvsCompareSessionList}}
+\index{OvsCompareSessionList@{OvsCompareSessionList}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsCompareSessionList()}{OvsCompareSessionList()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a65a542a520710fe07108d721fdceec8d} 
+int Ovs\+Compare\+Session\+List (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p1}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{p2}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a65a542a520710fe07108d721fdceec8d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a2066e61616ceecf05d8e6f3d58295c46}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsDataReverse@{OvsDataReverse}}
+\index{OvsDataReverse@{OvsDataReverse}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsDataReverse()}{OvsDataReverse()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a2066e61616ceecf05d8e6f3d58295c46} 
+void Ovs\+Data\+Reverse (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{const UINT}]{size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a2066e61616ceecf05d8e6f3d58295c46_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a3db300cd278a9115b7a17c2de2ce8505}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsDataXorMask@{OvsDataXorMask}}
+\index{OvsDataXorMask@{OvsDataXorMask}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsDataXorMask()}{OvsDataXorMask()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a3db300cd278a9115b7a17c2de2ce8505} 
+void Ovs\+Data\+Xor\+Mask (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{const UINT}]{data\+\_\+size}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{mask}{, }\item[{const UINT}]{mask\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a3db300cd278a9115b7a17c2de2ce8505_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a8a3e60f1d3637ec7bfe5538daafa4e2d}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsDataXorPtrPos@{OvsDataXorPtrPos}}
+\index{OvsDataXorPtrPos@{OvsDataXorPtrPos}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsDataXorPtrPos()}{OvsDataXorPtrPos()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a8a3e60f1d3637ec7bfe5538daafa4e2d} 
+void Ovs\+Data\+Xor\+Ptr\+Pos (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{const UINT}]{size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a8a3e60f1d3637ec7bfe5538daafa4e2d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_af575971cd11582b3608f8bc6fdabdb10}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsDecrypt@{OvsDecrypt}}
+\index{OvsDecrypt@{OvsDecrypt}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsDecrypt()}{OvsDecrypt()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_af575971cd11582b3608f8bc6fdabdb10} 
+UINT Ovs\+Decrypt (\begin{DoxyParamCaption}\item[{CIPHER \texorpdfstring{$\ast$}{*}}]{cipher}{, }\item[{MD \texorpdfstring{$\ast$}{*}}]{md}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{iv}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{UINT}]{size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_af575971cd11582b3608f8bc6fdabdb10_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a9fab46e51d6e429068b8149f2c68a6bc}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsDeleteFromSendingControlPacketList@{OvsDeleteFromSendingControlPacketList}}
+\index{OvsDeleteFromSendingControlPacketList@{OvsDeleteFromSendingControlPacketList}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsDeleteFromSendingControlPacketList()}{OvsDeleteFromSendingControlPacketList()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a9fab46e51d6e429068b8149f2c68a6bc} 
+void Ovs\+Delete\+From\+Sending\+Control\+Packet\+List (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{UINT}]{num\+\_\+acks}{, }\item[{UINT \texorpdfstring{$\ast$}{*}}]{acks}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a9fab46e51d6e429068b8149f2c68a6bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a9fab46e51d6e429068b8149f2c68a6bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a772afcf0adfb1e25ae0bc6dceaaa7cb6}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsDetectObfuscation@{OvsDetectObfuscation}}
+\index{OvsDetectObfuscation@{OvsDetectObfuscation}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsDetectObfuscation()}{OvsDetectObfuscation()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a772afcf0adfb1e25ae0bc6dceaaa7cb6} 
+UINT Ovs\+Detect\+Obfuscation (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{size}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{xormask}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a772afcf0adfb1e25ae0bc6dceaaa7cb6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a772afcf0adfb1e25ae0bc6dceaaa7cb6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a34f1bddc7edc9b9c433e555dc81a58da}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsEncrypt@{OvsEncrypt}}
+\index{OvsEncrypt@{OvsEncrypt}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsEncrypt()}{OvsEncrypt()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a34f1bddc7edc9b9c433e555dc81a58da} 
+UINT Ovs\+Encrypt (\begin{DoxyParamCaption}\item[{CIPHER \texorpdfstring{$\ast$}{*}}]{cipher}{, }\item[{MD \texorpdfstring{$\ast$}{*}}]{md}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{iv}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{tag}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{UINT}]{src\+\_\+size}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{aad}{, }\item[{UINT}]{aad\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a34f1bddc7edc9b9c433e555dc81a58da_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_abde32438d15d2e8d34a8dc87b8354bad}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsFindOrCreateSession@{OvsFindOrCreateSession}}
+\index{OvsFindOrCreateSession@{OvsFindOrCreateSession}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsFindOrCreateSession()}{OvsFindOrCreateSession()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_abde32438d15d2e8d34a8dc87b8354bad} 
+OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*} Ovs\+Find\+Or\+Create\+Session (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{UINT}]{server\+\_\+port}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{client\+\_\+ip}{, }\item[{UINT}]{client\+\_\+port}{, }\item[{UINT}]{protocol}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_abde32438d15d2e8d34a8dc87b8354bad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_abde32438d15d2e8d34a8dc87b8354bad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a2c884b4905125a40e85d0c51ced2a2c7}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsFree@{OvsFree}}
+\index{OvsFree@{OvsFree}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsFree()}{OvsFree()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a2c884b4905125a40e85d0c51ced2a2c7} 
+void Ovs\+Free (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{param}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a2c884b4905125a40e85d0c51ced2a2c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{_proto___open_v_p_n_8c_a2c884b4905125a40e85d0c51ced2a2c7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a0335ef84eff063684902ea467ead8784}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsFreeChannel@{OvsFreeChannel}}
+\index{OvsFreeChannel@{OvsFreeChannel}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsFreeChannel()}{OvsFreeChannel()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a0335ef84eff063684902ea467ead8784} 
+void Ovs\+Free\+Channel (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{_proto___open_v_p_n_8c_a0335ef84eff063684902ea467ead8784_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a0335ef84eff063684902ea467ead8784_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a8d88a0251f36896b4276aa1bc3cc4c45}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsFreeControlPacket@{OvsFreeControlPacket}}
+\index{OvsFreeControlPacket@{OvsFreeControlPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsFreeControlPacket()}{OvsFreeControlPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a8d88a0251f36896b4276aa1bc3cc4c45} 
+void Ovs\+Free\+Control\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CONTROL\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a8d88a0251f36896b4276aa1bc3cc4c45_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a7ca15bf58cb6b5668454c56403ad583c}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsFreePacket@{OvsFreePacket}}
+\index{OvsFreePacket@{OvsFreePacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsFreePacket()}{OvsFreePacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a7ca15bf58cb6b5668454c56403ad583c} 
+void Ovs\+Free\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a7ca15bf58cb6b5668454c56403ad583c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a5c5c1bfa973756b1d30262d36b8afdeb}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsFreeSession@{OvsFreeSession}}
+\index{OvsFreeSession@{OvsFreeSession}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsFreeSession()}{OvsFreeSession()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a5c5c1bfa973756b1d30262d36b8afdeb} 
+void Ovs\+Free\+Session (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a5c5c1bfa973756b1d30262d36b8afdeb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a5c5c1bfa973756b1d30262d36b8afdeb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_acfbaf9126d7c150ffa1007a1f413efe2}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsGetAckReplyList@{OvsGetAckReplyList}}
+\index{OvsGetAckReplyList@{OvsGetAckReplyList}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsGetAckReplyList()}{OvsGetAckReplyList()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_acfbaf9126d7c150ffa1007a1f413efe2} 
+UINT Ovs\+Get\+Ack\+Reply\+List (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{UINT \texorpdfstring{$\ast$}{*}}]{ret}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_acfbaf9126d7c150ffa1007a1f413efe2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a91137e4cd20cc53108c3b017f064d732}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsGetCipher@{OvsGetCipher}}
+\index{OvsGetCipher@{OvsGetCipher}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsGetCipher()}{OvsGetCipher()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a91137e4cd20cc53108c3b017f064d732} 
+CIPHER \texorpdfstring{$\ast$}{*} Ovs\+Get\+Cipher (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a91137e4cd20cc53108c3b017f064d732_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a1d0c8bdc2da1100471838339c5e0928c}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsGetMd@{OvsGetMd}}
+\index{OvsGetMd@{OvsGetMd}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsGetMd()}{OvsGetMd()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a1d0c8bdc2da1100471838339c5e0928c} 
+MD \texorpdfstring{$\ast$}{*} Ovs\+Get\+Md (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a1d0c8bdc2da1100471838339c5e0928c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a3142c1e6351882d83db2583a4863da0a}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsGetNumSessionByClientIp@{OvsGetNumSessionByClientIp}}
+\index{OvsGetNumSessionByClientIp@{OvsGetNumSessionByClientIp}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsGetNumSessionByClientIp()}{OvsGetNumSessionByClientIp()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a3142c1e6351882d83db2583a4863da0a} 
+UINT Ovs\+Get\+Num\+Session\+By\+Client\+Ip (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{ip}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a3142c1e6351882d83db2583a4863da0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_aa40d6d67f978e9a496bf7fc3ecb00b53}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsGetProtoImpl@{OvsGetProtoImpl}}
+\index{OvsGetProtoImpl@{OvsGetProtoImpl}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsGetProtoImpl()}{OvsGetProtoImpl()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_aa40d6d67f978e9a496bf7fc3ecb00b53} 
+const PROTO\+\_\+\+IMPL \texorpdfstring{$\ast$}{*} Ovs\+Get\+Proto\+Impl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_aa40d6d67f978e9a496bf7fc3ecb00b53_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_ac5fe0be86528f6583a4fa476f2826e90}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsInit@{OvsInit}}
+\index{OvsInit@{OvsInit}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsInit()}{OvsInit()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_ac5fe0be86528f6583a4fa476f2826e90} 
+bool Ovs\+Init (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{param}{, }\item[{const LIST \texorpdfstring{$\ast$}{*}}]{options}{, }\item[{CEDAR \texorpdfstring{$\ast$}{*}}]{cedar}{, }\item[{INTERRUPT\+\_\+\+MANAGER \texorpdfstring{$\ast$}{*}}]{im}{, }\item[{SOCK\+\_\+\+EVENT \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{cipher}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{hostname}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_ac5fe0be86528f6583a4fa476f2826e90_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{_proto___open_v_p_n_8c_ac5fe0be86528f6583a4fa476f2826e90_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a407ee536fca7e7d24021bfd4400381db}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsIsPacketForMe@{OvsIsPacketForMe}}
+\index{OvsIsPacketForMe@{OvsIsPacketForMe}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsIsPacketForMe()}{OvsIsPacketForMe()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a407ee536fca7e7d24021bfd4400381db} 
+bool Ovs\+Is\+Packet\+For\+Me (\begin{DoxyParamCaption}\item[{const PROTO\+\_\+\+MODE}]{mode}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{const UINT}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a407ee536fca7e7d24021bfd4400381db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{_proto___open_v_p_n_8c_a407ee536fca7e7d24021bfd4400381db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a5ebe55982e98740d0f5dcba82a32117a}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsLog@{OvsLog}}
+\index{OvsLog@{OvsLog}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsLog()}{OvsLog()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a5ebe55982e98740d0f5dcba82a32117a} 
+void Ovs\+Log (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a5ebe55982e98740d0f5dcba82a32117a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_ac1694bce99fc371a378ea096b4016602}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsName@{OvsName}}
+\index{OvsName@{OvsName}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsName()}{OvsName()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_ac1694bce99fc371a378ea096b4016602} 
+const char \texorpdfstring{$\ast$}{*} Ovs\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{_proto___open_v_p_n_8c_ac1694bce99fc371a378ea096b4016602_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a8eb80307e0f4a9bee8beafa817106dbd}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsNewChannel@{OvsNewChannel}}
+\index{OvsNewChannel@{OvsNewChannel}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsNewChannel()}{OvsNewChannel()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a8eb80307e0f4a9bee8beafa817106dbd} 
+OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*} Ovs\+New\+Channel (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{UCHAR}]{key\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a8eb80307e0f4a9bee8beafa817106dbd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_af6324b811fbb2a708cee2d38f9ddf62b}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsNewControlPacket@{OvsNewControlPacket}}
+\index{OvsNewControlPacket@{OvsNewControlPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsNewControlPacket()}{OvsNewControlPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_af6324b811fbb2a708cee2d38f9ddf62b} 
+OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*} Ovs\+New\+Control\+Packet (\begin{DoxyParamCaption}\item[{UCHAR}]{opcode}{, }\item[{UCHAR}]{key\+\_\+id}{, }\item[{UINT64}]{my\+\_\+channel\+\_\+id}{, }\item[{UINT}]{num\+\_\+ack}{, }\item[{UINT \texorpdfstring{$\ast$}{*}}]{ack\+\_\+packet\+\_\+ids}{, }\item[{UINT64}]{your\+\_\+channel\+\_\+id}{, }\item[{UINT}]{packet\+\_\+id}{, }\item[{UINT}]{data\+\_\+size}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_af6324b811fbb2a708cee2d38f9ddf62b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a8c49dc0fff2793e2949b8da2301cd25b}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsNewServerSessionId@{OvsNewServerSessionId}}
+\index{OvsNewServerSessionId@{OvsNewServerSessionId}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsNewServerSessionId()}{OvsNewServerSessionId()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a8c49dc0fff2793e2949b8da2301cd25b} 
+UINT64 Ovs\+New\+Server\+Session\+Id (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a8c49dc0fff2793e2949b8da2301cd25b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a153d15a1b88d4c52bcac5db5563cb07c}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsNewSession@{OvsNewSession}}
+\index{OvsNewSession@{OvsNewSession}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsNewSession()}{OvsNewSession()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a153d15a1b88d4c52bcac5db5563cb07c} 
+OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*} Ovs\+New\+Session (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{UINT}]{server\+\_\+port}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{client\+\_\+ip}{, }\item[{UINT}]{client\+\_\+port}{, }\item[{UINT}]{protocol}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a153d15a1b88d4c52bcac5db5563cb07c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a153d15a1b88d4c52bcac5db5563cb07c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a235d43a3d7cff7c4dee722eb869aaaf8}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsOptions@{OvsOptions}}
+\index{OvsOptions@{OvsOptions}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsOptions()}{OvsOptions()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a235d43a3d7cff7c4dee722eb869aaaf8} 
+const PROTO\+\_\+\+OPTION \texorpdfstring{$\ast$}{*} Ovs\+Options (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{_proto___open_v_p_n_8c_a235d43a3d7cff7c4dee722eb869aaaf8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a88a8b6c1e4864be15197a1814de2357f}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsParseKeyMethod2@{OvsParseKeyMethod2}}
+\index{OvsParseKeyMethod2@{OvsParseKeyMethod2}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsParseKeyMethod2()}{OvsParseKeyMethod2()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a88a8b6c1e4864be15197a1814de2357f} 
+UINT Ovs\+Parse\+Key\+Method2 (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+KEY\+\_\+\+METHOD\+\_\+2 \texorpdfstring{$\ast$}{*}}]{ret}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{size}{, }\item[{bool}]{client\+\_\+mode}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a88a8b6c1e4864be15197a1814de2357f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a88a8b6c1e4864be15197a1814de2357f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a08f227c666ed5579b89e74317f6d415a}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsParsePacket@{OvsParsePacket}}
+\index{OvsParsePacket@{OvsParsePacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsParsePacket()}{OvsParsePacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a08f227c666ed5579b89e74317f6d415a} 
+OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*} Ovs\+Parse\+Packet (\begin{DoxyParamCaption}\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{_proto___open_v_p_n_8c_a08f227c666ed5579b89e74317f6d415a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a08f227c666ed5579b89e74317f6d415a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a9699836bafc5f6ca6019e6102b9a11cc}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsPeekStringFromFifo@{OvsPeekStringFromFifo}}
+\index{OvsPeekStringFromFifo@{OvsPeekStringFromFifo}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsPeekStringFromFifo()}{OvsPeekStringFromFifo()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a9699836bafc5f6ca6019e6102b9a11cc} 
+UINT Ovs\+Peek\+String\+From\+Fifo (\begin{DoxyParamCaption}\item[{FIFO \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{UINT}]{str\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a9699836bafc5f6ca6019e6102b9a11cc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a2eabf421c04bb7c2d667a9b9b19abe40}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsProceccRecvPacket@{OvsProceccRecvPacket}}
+\index{OvsProceccRecvPacket@{OvsProceccRecvPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsProceccRecvPacket()}{OvsProceccRecvPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a2eabf421c04bb7c2d667a9b9b19abe40} 
+void Ovs\+Procecc\+Recv\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{UDPPACKET \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{UINT}]{protocol}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a2eabf421c04bb7c2d667a9b9b19abe40_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a2eabf421c04bb7c2d667a9b9b19abe40_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a3a0ee42a418fb5b9759b24b8b145f97d}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsProcessData@{OvsProcessData}}
+\index{OvsProcessData@{OvsProcessData}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsProcessData()}{OvsProcessData()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a3a0ee42a418fb5b9759b24b8b145f97d} 
+bool Ovs\+Process\+Data (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{param}{, }\item[{TCP\+\_\+\+RAW\+\_\+\+DATA \texorpdfstring{$\ast$}{*}}]{in}{, }\item[{FIFO \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a3a0ee42a418fb5b9759b24b8b145f97d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{_proto___open_v_p_n_8c_a3a0ee42a418fb5b9759b24b8b145f97d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_aa0c78fb58ae75b8238b9bdd55f02475d}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsProcessDatagrams@{OvsProcessDatagrams}}
+\index{OvsProcessDatagrams@{OvsProcessDatagrams}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsProcessDatagrams()}{OvsProcessDatagrams()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_aa0c78fb58ae75b8238b9bdd55f02475d} 
+bool Ovs\+Process\+Datagrams (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{param}{, }\item[{LIST \texorpdfstring{$\ast$}{*}}]{in}{, }\item[{LIST \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_aa0c78fb58ae75b8238b9bdd55f02475d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{_proto___open_v_p_n_8c_aa0c78fb58ae75b8238b9bdd55f02475d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a1f64902f27656f97792caa898dbc0a4c}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsProcessRecvControlPacket@{OvsProcessRecvControlPacket}}
+\index{OvsProcessRecvControlPacket@{OvsProcessRecvControlPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsProcessRecvControlPacket()}{OvsProcessRecvControlPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a1f64902f27656f97792caa898dbc0a4c} 
+void Ovs\+Process\+Recv\+Control\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a1f64902f27656f97792caa898dbc0a4c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a1f64902f27656f97792caa898dbc0a4c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_afa16d8c4e344b8dec626bf55c8f6606b}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsReadStringFromBuf@{OvsReadStringFromBuf}}
+\index{OvsReadStringFromBuf@{OvsReadStringFromBuf}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsReadStringFromBuf()}{OvsReadStringFromBuf()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_afa16d8c4e344b8dec626bf55c8f6606b} 
+bool Ovs\+Read\+String\+From\+Buf (\begin{DoxyParamCaption}\item[{BUF \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{UINT}]{str\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_afa16d8c4e344b8dec626bf55c8f6606b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a951cd3be779aab193849eeb7d2c75015}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsRecvPacket@{OvsRecvPacket}}
+\index{OvsRecvPacket@{OvsRecvPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsRecvPacket()}{OvsRecvPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a951cd3be779aab193849eeb7d2c75015} 
+void Ovs\+Recv\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{LIST \texorpdfstring{$\ast$}{*}}]{recv\+\_\+packet\+\_\+list}{, }\item[{UINT}]{protocol}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a951cd3be779aab193849eeb7d2c75015_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a951cd3be779aab193849eeb7d2c75015_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_aaae07b6584db45136f09de18169c3cf0}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSearchSession@{OvsSearchSession}}
+\index{OvsSearchSession@{OvsSearchSession}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSearchSession()}{OvsSearchSession()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_aaae07b6584db45136f09de18169c3cf0} 
+OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*} Ovs\+Search\+Session (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{UINT}]{server\+\_\+port}{, }\item[{IP \texorpdfstring{$\ast$}{*}}]{client\+\_\+ip}{, }\item[{UINT}]{client\+\_\+port}{, }\item[{UINT}]{protocol}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_aaae07b6584db45136f09de18169c3cf0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a453f61207a9e9b529579dcc5ed52e509}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSendControlPacket@{OvsSendControlPacket}}
+\index{OvsSendControlPacket@{OvsSendControlPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSendControlPacket()}{OvsSendControlPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a453f61207a9e9b529579dcc5ed52e509} 
+void Ovs\+Send\+Control\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{UCHAR}]{opcode}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{data\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a453f61207a9e9b529579dcc5ed52e509_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a453f61207a9e9b529579dcc5ed52e509_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a99186f8fd6cf5c4b7bdda40febeaada5}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSendControlPacketEx@{OvsSendControlPacketEx}}
+\index{OvsSendControlPacketEx@{OvsSendControlPacketEx}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSendControlPacketEx()}{OvsSendControlPacketEx()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a99186f8fd6cf5c4b7bdda40febeaada5} 
+void Ovs\+Send\+Control\+Packet\+Ex (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{UCHAR}]{opcode}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{data\+\_\+size}{, }\item[{bool}]{no\+\_\+resend}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a99186f8fd6cf5c4b7bdda40febeaada5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_acd06b08cdbe43a14d0e853c52c2980a4}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSendControlPacketWithAutoSplit@{OvsSendControlPacketWithAutoSplit}}
+\index{OvsSendControlPacketWithAutoSplit@{OvsSendControlPacketWithAutoSplit}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSendControlPacketWithAutoSplit()}{OvsSendControlPacketWithAutoSplit()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_acd06b08cdbe43a14d0e853c52c2980a4} 
+void Ovs\+Send\+Control\+Packet\+With\+Auto\+Split (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{UCHAR}]{opcode}{, }\item[{UCHAR \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{data\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_acd06b08cdbe43a14d0e853c52c2980a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_acd06b08cdbe43a14d0e853c52c2980a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_abe7d0a579e657ab2759cdabb63b3c176}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSendDataPacket@{OvsSendDataPacket}}
+\index{OvsSendDataPacket@{OvsSendDataPacket}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSendDataPacket()}{OvsSendDataPacket()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_abe7d0a579e657ab2759cdabb63b3c176} 
+void Ovs\+Send\+Data\+Packet (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{UCHAR}]{key\+\_\+id}{, }\item[{UINT}]{data\+\_\+packet\+\_\+id}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{data\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_abe7d0a579e657ab2759cdabb63b3c176_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_abe7d0a579e657ab2759cdabb63b3c176_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_aee2c17a1d6c7b3a8a52986e178e736ad}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSendPacketNow@{OvsSendPacketNow}}
+\index{OvsSendPacketNow@{OvsSendPacketNow}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSendPacketNow()}{OvsSendPacketNow()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_aee2c17a1d6c7b3a8a52986e178e736ad} 
+void Ovs\+Send\+Packet\+Now (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{OPENVPN\+\_\+\+PACKET \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_aee2c17a1d6c7b3a8a52986e178e736ad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_aee2c17a1d6c7b3a8a52986e178e736ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_af2bffca218a7981df56dcdca3fe72caa}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSendPacketRawNow@{OvsSendPacketRawNow}}
+\index{OvsSendPacketRawNow@{OvsSendPacketRawNow}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSendPacketRawNow()}{OvsSendPacketRawNow()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_af2bffca218a7981df56dcdca3fe72caa} 
+void Ovs\+Send\+Packet\+Raw\+Now (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{UINT}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{_proto___open_v_p_n_8c_af2bffca218a7981df56dcdca3fe72caa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_af2bffca218a7981df56dcdca3fe72caa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a42f23f778e5b4051fb821caae06608e1}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsSetupSessionParameters@{OvsSetupSessionParameters}}
+\index{OvsSetupSessionParameters@{OvsSetupSessionParameters}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsSetupSessionParameters()}{OvsSetupSessionParameters()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a42f23f778e5b4051fb821caae06608e1} 
+void Ovs\+Setup\+Session\+Parameters (\begin{DoxyParamCaption}\item[{OPENVPN\+\_\+\+SERVER \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{OPENVPN\+\_\+\+SESSION \texorpdfstring{$\ast$}{*}}]{se}{, }\item[{OPENVPN\+\_\+\+CHANNEL \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{OPENVPN\+\_\+\+KEY\+\_\+\+METHOD\+\_\+2 \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{_proto___open_v_p_n_8c_a42f23f778e5b4051fb821caae06608e1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a42f23f778e5b4051fb821caae06608e1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_proto___open_v_p_n_8c_a4a0651c09c7d9866cf4dbfa878500972}\index{Proto\_OpenVPN.c@{Proto\_OpenVPN.c}!OvsWriteStringToBuf@{OvsWriteStringToBuf}}
+\index{OvsWriteStringToBuf@{OvsWriteStringToBuf}!Proto\_OpenVPN.c@{Proto\_OpenVPN.c}}
+\doxysubsubsection{\texorpdfstring{OvsWriteStringToBuf()}{OvsWriteStringToBuf()}}
+{\footnotesize\ttfamily \label{_proto___open_v_p_n_8c_a4a0651c09c7d9866cf4dbfa878500972} 
+void Ovs\+Write\+String\+To\+Buf (\begin{DoxyParamCaption}\item[{BUF \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{UINT}]{max\+\_\+size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_proto___open_v_p_n_8c_a4a0651c09c7d9866cf4dbfa878500972_icgraph}
+\end{center}
+\end{figure}
