@@ -1,0 +1,15 @@
+
+
+
+cat > .gitignore << EOF
+*.log
+*.tmp
+node_modules/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+EOF
+
+git add .gitignore
+git commit -m "Add .gitignore"
