@@ -169,8 +169,9 @@ function applyNetworkMutations(mutationArray, dataPtr, currentSizePtr, packetSiz
 
         // 3. Операция INSERT ("i")
         else if (mut.op === "i") {
-            var insertLen = valBytes.length;
-            if (startOffset <= u8Array.length) {
+            if (isRange) {
+                var insertLen = endOffset - startOffset;
+                // формируем новый, расширенный массив
                 var extendedArray = new Uint8Array(newSize + insertLen);
                 // Копируем до смещения
                 extendedArray.set(u8Array.subarray(0, startOffset), 0);
@@ -181,6 +182,18 @@ function applyNetworkMutations(mutationArray, dataPtr, currentSizePtr, packetSiz
                 
                 u8Array = extendedArray;
                 newSize += insertLen;
+            }
+            else {
+                // почти так же, только считаем длину для вставки
+                var insertLen = valBytes.length;
+                if (startOffset <= u8Array.length) {
+                    var extendedArray = new Uint8Array(newSize + insertLen);
+                    extendedArray.set(u8Array.subarray(0, startOffset), 0);
+                    extendedArray.set(valBytes, startOffset);
+                    extendedArray.set(u8Array.subarray(startOffset), startOffset + insertLen);
+                    u8Array = extendedArray;
+                    newSize += insertLen;
+                }
             }
         }
 

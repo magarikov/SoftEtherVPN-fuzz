@@ -1,8 +1,0 @@
-<map id="OvsIsPacketForMe" name="OvsIsPacketForMe">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" id="Node000002" href="$_proto___open_v_p_n_8c.html#a7ca15bf58cb6b5668454c56403ad583c" title=" " alt="" coords="356,5,468,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,16,341,16,340,21,140,21"/>
-<area shape="rect" id="Node000003" href="$_proto___open_v_p_n_8c.html#a08f227c666ed5579b89e74317f6d415a" title=" " alt="" coords="188,31,308,57"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,26,175,33,170,33,140,31"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="308,32,338,30,343,29,309,37"/>
-</map>
