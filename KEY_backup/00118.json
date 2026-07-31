@@ -1,0 +1,79 @@
+{
+  "S1": [
+    {"msg": "M3", "offset": 18, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "ff", "op": "i", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "ff", "op": "i", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "ff", "op": "i", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M3", "offset": [18, 21], "val": "00", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M3", "offset": 18, "val": "ef", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "be", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "ad", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "de", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M3", "offset": 18, "val": "01", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": [19, 21], "val": "00", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M3", "offset": 18, "val": "7f", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "ff", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M3", "offset": [18, 21], "val": "41", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M3", "offset": 18, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "80", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M3", "offset": 18, "val": "34", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "12", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "56", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "78", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M3", "offset": 18, "val": "ff", "op": "r", "size": "4096"},
+    {"msg": "M3", "offset": 19, "val": "ff", "op": "r", "size": "4096"}
+  ],
+  "S10": [
+    {"msg": "M3", "offset": 18, "val": "02", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "00", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M3", "offset": [18, 21], "val": "99", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M3", "offset": 18, "val": "10", "op": "r", "size": "1024"},
+    {"msg": "M3", "offset": 19, "val": "20", "op": "r", "size": "1024"},
+    {"msg": "M3", "offset": 20, "val": "30", "op": "r", "size": "1024"},
+    {"msg": "M3", "offset": 21, "val": "40", "op": "r", "size": "1024"}
+  ],
+  "S13": [
+    {"msg": "M3", "offset": 18, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "00", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M3", "offset": 18, "val": "80", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "80", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M3", "offset": 18, "val": "0f", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 19, "val": "f0", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 20, "val": "0f", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 21, "val": "f0", "op": "r", "size": "-"}
+  ]
+}

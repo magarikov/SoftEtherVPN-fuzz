@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M17", "offset": 12, "val": "41414141414141414141414141414141", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M17", "offset": 12, "val": "00000000000000000000000000000000", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M17", "offset": 12, "val": "25732573257325732573257325732573", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M17", "offset": 12, "val": "2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M17", "offset": 12, "val": "ffffffffffffffffffffffffffffffff", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M17", "offset": 12, "val": "0102030405060708090a0b0c0d0e0f10", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M17", "offset": [12, 64], "val": "58", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M17", "offset": 12, "val": "00410041004100410041004100410041", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M17", "offset": 12, "val": "aaaaaaaabbbbbbbbccccccccdddddddd", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M17", "offset": 12, "val": "cccccccccccccccccccccccccccccccc", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M17", "offset": 12, "val": "ffffffffffffffffffffffffffffffff", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M17", "offset": [12, 32], "val": "41", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M17", "offset": 12, "val": "2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M17", "offset": 12, "val": "2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M17", "offset": 12, "val": "30303030303030303030303030303030", "op": "r", "size": "-"}
+  ]
+}

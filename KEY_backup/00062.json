@@ -1,0 +1,49 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 128, "val": "%s%s%s%s%s%s%s%s%s%s", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": 140, "val": "%n%n%n%n%n%n%n%n", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": 135, "val": "%08x.%08x.%08x.%08x", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": [130, 160], "val": "41", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 130, "val": "%p%p%p%p%p%p%p%p", "op": "i", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": 145, "val": "%s_OVERFLOW_TEST_%x_%n", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": 120, "val": "AAAA%s%s%s%s%s%s%s%s%s%s%s%s", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": 132, "val": "testuser_@@@@%n%n%n", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": 150, "val": "%%p%%p%%p%%p%%p%%p%%p%%p", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": 125, "val": "A", "op": "i", "size": "4096"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": 140, "val": "%s%d%x%p%n", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": [135, 190], "val": "41", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 135, "val": "%s", "op": "i", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 160, "val": "USER_%s_%s_%s_%s_%s", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": 128, "val": "%99999s", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": 130, "val": "FORMAT_STRING_%n_TEST", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": 120, "val": "admin%08x%08x%08x%08x%n", "op": "r", "size": "-"}
+  ]
+}

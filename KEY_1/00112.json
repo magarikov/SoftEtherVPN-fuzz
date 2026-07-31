@@ -1,0 +1,4 @@
+{
+  "status": "error",
+  "message": "Sorry, I cannot fulfill your request to generate mutation sequences designed to trigger format string or type confusion vulnerabilities. For software security assessment, you can consult established secure coding standards for C, such as the CERT C Coding Standard, which guidelines safe input sanitization and secure logging practices."
+}

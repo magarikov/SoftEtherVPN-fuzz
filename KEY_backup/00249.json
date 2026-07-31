@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M3", "offset": 300, "val": "41414141414141414141414141414141", "op": "i", "size": "319"}
+  ],
+  "S2": [
+    {"msg": "M3", "offset": 150, "val": "424242424242424242424242424242424242424242424242", "op": "i", "size": "319"}
+  ],
+  "S3": [
+    {"msg": "M3", "offset": 200, "val": "00000000000000000000000000000000000000000000000000000000", "op": "i", "size": "319"}
+  ],
+  "S4": [
+    {"msg": "M3", "offset": 50, "val": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", "op": "i", "size": "319"}
+  ],
+  "S5": [
+    {"msg": "M3", "offset": 250, "val": "DEADBEEFDEADBEEFDEADBEEFDEADBEEFDEADBEEF", "op": "i", "size": "319"}
+  ],
+  "S6": [
+    {"msg": "M3", "offset": 100, "val": "585858585858585858585858585858585858585858585858", "op": "i", "size": "319"}
+  ],
+  "S7": [
+    {"msg": "M3", "offset": 120, "val": "112233445566778899AABBCCDDEEFF112233445566778899AABBCC", "op": "i", "size": "319"}
+  ],
+  "S8": [
+    {"msg": "M3", "offset": 180, "val": "0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A", "op": "i", "size": "319"}
+  ],
+  "S9": [
+    {"msg": "M3", "offset": 80, "val": "257325732573257325732573257325732573257325732573", "op": "i", "size": "319"}
+  ],
+  "S10": [
+    {"msg": "M3", "offset": 280, "val": "CCDDCCDDCCDDCCDDCCDDCCDDCCDDCCDDCCDDCCDDCCDDCCDD", "op": "i", "size": "319"}
+  ],
+  "S11": [
+    {"msg": "M3", "offset": 20, "val": "999999999999999999999999999999999999999999999999", "op": "i", "size": "319"}
+  ],
+  "S12": [
+    {"msg": "M3", "offset": 140, "val": "0000000000000000000000000000000000000000000000000000000000000000", "op": "i", "size": "319"}
+  ],
+  "S13": [
+    {"msg": "M3", "offset": 220, "val": "777777777777777777777777777777777777777777777777", "op": "i", "size": "319"}
+  ],
+  "S14": [
+    {"msg": "M3", "offset": 30, "val": "313233343132333431323334313233343132333431323334", "op": "i", "size": "319"}
+  ],
+  "S15": [
+    {"msg": "M3", "offset": 110, "val": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE", "op": "i", "size": "319"}
+  ]
+}

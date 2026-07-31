@@ -1,0 +1,80 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 16, "val": "VERY_LONG_USER_NAME_FOR_BUFFER_OVERFLOW_TESTING_A", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "COMMAND_INJECTION_TEST;DROP_TABLE;", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M3", "offset": [26, 250], "val": "00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 140, "val": "VERY_LONG_USER_NAME_FOR_BUFFER_OVERFLOW_TESTING_A", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "COMMAND_INJECTION_TEST;DROP_TABLE;", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M3", "offset": [0, 500], "val": "00", "op": "d", "size": "-"},
+    {"msg": "M3", "offset": 0, "val": "PUSH_REQUEST\x00", "op": "i", "size": "-"},
+    {"msg": "M9", "offset": 100, "val": "0x41", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M1", "offset": 0, "val": "38", "op": "r", "size": "-"},
+    {"msg": "M1", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 0, "val": "0x0a", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00%s%x%s%x", "op": "r", "size": "0"}
+  ],
+  "S5": [
+    {"msg": "M6", "offset": 0, "val": "00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 50, "val": "0x41", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "", "op": "d", "size": "4096"}
+  ],
+  "S6": [
+    {"msg": "M1", "offset": 9, "val": "0xFF", "op": "r", "size": "0"},
+    {"msg": "M1", "offset": 10, "val": "0x04", "op": "i", "size": "0"},
+    {"msg": "M3", "offset": [0, 300], "val": "0x41", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 140, "val": "VERY_LONG_USER_NAME_FOR_BUFFER_OVERFLOW_TESTING_A", "op": "i", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "COMMAND_INJECTION_TEST;DROP_TABLE;", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M3", "offset": [0, 500], "val": "0x00", "op": "d", "size": "-"},
+    {"msg": "M3", "offset": 0, "val": "PUSH_REQUEST\x00", "op": "i", "size": "-"},
+    {"msg": "M9", "offset": 16, "val": "0x25", "op": "i", "size": "-"},
+    {"msg": "M9", "offset": [18, 300], "val": "0x25", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\x00%n%n%n", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M1", "offset": 0, "val": "0x08", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": 0, "val": "0x16", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 0, "val": "0x50", "op": "i", "size": "-"},
+    {"msg": "M9", "offset": 50, "val": "0x41", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "0x50", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M3", "offset": 0, "val": "0xA0", "op": "i", "size": "0"},
+    {"msg": "M3", "offset": [1, 100], "val": "0x00", "op": "r", "size": "0"},
+    {"msg": "M9", "offset": 0, "val": "0xB0", "op": "i", "size": "0"},
+    {"msg": "M9", "offset": [4, 200], "val": "0xFF", "op": "r", "size": "0"},
+    {"msg": "M17", "offset": 0, "val": "0xFF", "op": "r", "size": "0"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": 16, "val": "PUSH_REQUEST\x00setenv TEST_VAR $(whoami)", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 60, "val": "PUSH_REQUEST\x00getpeername", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": 0, "val": "PUSH_REPLY\x00ifconfig 10.0.0.1 255.255.255.0 metric 99999", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 50, "val": "PUSH_REPLY\x00route 192.168.100.0/24 10.0.0.1", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 16, "val": "VERY_LONG_OPTIONS_STRING_OVERFLOW_CHECK_" + "A" * 200, "op": "r", "size": "500"},
+    {"msg": "M9", "offset": 16, "val": "NORMAL_STRING\x00" + "B" * 100, "op": "r", "size": "500"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": 100, "val": "PUSH_REQUEST\x00log_level 9999", "op": "i", "size": "-"},
+    {"msg": "M9", "offset": 150, "val": "PUSH_REQUEST\x00auth-nocache --script-security 3", "op": "i", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": 16, "val": "option_string_with_unicode_and_null\x00\x00\x00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 50, "val": "option_string_containing_format_specifiers_%n_%n", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": 16, "val": "PUSH_REPLY\x00cipher AES-128-CBC\x00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 50, "val": "PUSH_REPLY\x00auth SHA256\x00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": 100, "val": "PUSH_REPLY\x00tls-version-min 1.0\x00", "op": "r", "size": "-"}
+  ]
+}

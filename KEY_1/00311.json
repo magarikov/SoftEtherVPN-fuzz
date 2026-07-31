@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 128, "val": "tun-mtu 999999999,link-mtu 999999999", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": 128, "val": "cipher INVALID_CIPHER_NAME_OVERFLOW_TEST", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": [128, 200], "val": "41", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": 135, "val": "%s%s%s%s%p%p%p%p", "op": "i", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": 150, "val": ";renegotiate-sec 0;", "op": "i", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": 140, "val": "topology subnet,route 0.0.0.0 0.0.0.0", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": 128, "val": "auth-user-pass,username %s%n%s%n", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": 180, "val": "redirect-gateway def1 bypass-dhcp,dhcp-option DNS 8.8.8.8", "op": "i", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": 128, "val": "invalid-directive-test-string-without-spaces", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": 130, "val": "script-security 3,up /bin/sh", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": 145, "val": "client-nat snat 0.0.0.0 0.0.0.0 1.2.3.4", "op": "i", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 128, "val": "key-method 99,tls-version-min 3.0", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": 160, "val": "fragment 0,mssfix 0", "op": "i", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": 128, "val": "ping 1,ping-restart 1,ping-exit 1", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": 135, "val": "plugin /usr/lib/malicious.so arg1 arg2", "op": "r", "size": "-"}
+  ]
+}

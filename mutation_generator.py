@@ -25,7 +25,7 @@ import json
 import random
 
 
-GEMINI_KEY = "AQ.Ab8RN6Lp6OGDc1gySv1xJxrd-LIc1CYU6dtTS_n08jZr21KvaQ" 
+GEMINI_KEY = "AQ.Ab8RN6KyeQ6mbm2wnQlmUPgqJYMhavNvpS4GdlGTPBN9T2Q_iw" 
 OPENAI_KEY = "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"
 OPENROUTER_KEY = "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"
 
@@ -62,6 +62,10 @@ instructions = [
 # список доступных моделей (в ходе работы может уменьшаться, если модели недоступны)
 models = ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.6-flash', 'gemini-3.5-flash',
            'gemini-2.5-pro', 'nvidia/nemotron-nano-12b-v2-vl:free', 'inclusionai/ling-3.0-flash:free']
+
+class Error(Exception):
+    def __init__(self, code):
+        self.code = code
 
 # makes a request to LLM and returns json answer
 def makeRequest(model, temp, user_instruction, system_instruction_text):
@@ -111,8 +115,12 @@ def makeRequest(model, temp, user_instruction, system_instruction_text):
         }),
         timeout=10
         )
-        response = response.json()
-        response = response["choices"][0]["message"]["content"]
+        try:
+            response = response.json()
+            response = response["choices"][0]["message"]["content"]
+        except Exception as e:  
+            raise Error(429)
+        
 
     elif model == "inclusionai/ling-3.0-flash:free":
         response = requests.post(
@@ -132,8 +140,11 @@ def makeRequest(model, temp, user_instruction, system_instruction_text):
         }),
         timeout=10
         )
-        response = response.json()
-        response = response["choices"][0]["message"]["content"]
+        try:
+            response = response.json()
+            response = response["choices"][0]["message"]["content"]
+        except Exception as e:  
+            raise Error(429)
 
     return response
 
@@ -184,7 +195,7 @@ def run_fuzzing_generation(prompt_file_path, output_dir="KEY_1", output_dir_back
 
                 try:
                     temperature = random.randint(50, 140) / 100
-                    json_data = makeRequest(models[-1], temperature, user_instruction, system_instruction_text)
+                    json_data = makeRequest(model, temperature, user_instruction, system_instruction_text)
 
                     # Сохраняем в файл
                     with open(filepath, "w", encoding="utf-8") as out_file:
@@ -195,7 +206,7 @@ def run_fuzzing_generation(prompt_file_path, output_dir="KEY_1", output_dir_back
                     print(f"Создан файл: {filepath}")
 
                     with open(f"{output_dir_backup}/info.txt", "a+") as f:
-                        f.write(f"\n{filename_backup} {index} {temperature} {model}")
+                        f.write(f"\n{filename_backup} {index} {temperature:0.2f} {model}")
 
                     # увеличиваем счетчик файлов
                     global_counter += 1
