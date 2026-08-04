@@ -25,10 +25,6 @@ import json
 import random
 
 
-GEMINI_KEY = "AQ.Ab8RN6KyeQ6mbm2wnQlmUPgqJYMhavNvpS4GdlGTPBN9T2Q_iw" 
-OPENAI_KEY = "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"
-OPENROUTER_KEY = "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"
-
 instructions = [
         # Вектор 1: Ломание конечного автомата
         "Generate 15 unique mutation sequences focusing on sending out-of-order packets. Mutate offset 0 of message M3 to replace the valid control opcode with data packet opcodes or server-side opcodes like 8 or 9 to trigger early resource allocation. Return data in strictly valid JSON format.",
@@ -223,14 +219,25 @@ def run_fuzzing_generation(prompt_file_path, output_dir="KEY_1", output_dir_back
                 # Небольшая пауза, чтобы не выйти за лимиты
                 time.sleep(15)
 
+def init():
+    global GEMINI_KEY, OPENROUTER_KEY, prompt_path
 
-if __name__ == "__main__":
+    if os.path.exists(".env"):
+        GEMINI_KEY = os.getenv("GEMINI_KEY")
+        OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
+    else:
+        if GEMINI_KEY == "" or OPENROUTER_KEY == "":
+            print("ERROR: .env file not found and keys are empty!")
+            exit()
+
     prompt_path = "промт 12000.txt"
-    
     if not os.path.exists(prompt_path):
         print(f"ERROR: file {prompt_path} not found!")
         exit()
 
+if __name__ == "__main__":
+
+    init()
     run_fuzzing_generation(prompt_path)
 
 
