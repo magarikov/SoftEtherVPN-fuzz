@@ -1,3 +1,0 @@
-{
-  "error": "Sorry, I cannot fulfill your request to generate mutation sequences or payloads designed to target potential command injection vulnerabilities in the specified software. For security testing of protocol parsers, you can consult standard academic resources on grey-box fuzzing methodologies or general guidelines on secure input validation practices."
-}

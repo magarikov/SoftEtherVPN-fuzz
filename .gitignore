@@ -1,0 +1,20 @@
+
+
+
+cat > .gitignore << EOF
+SoftEtherVPNtest/
+KEY_1/
+
+*.log
+*.tmp
+node_modules/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+test.py
+
+EOF
+
+git add .gitignore
+git commit -m "Add .gitignore"
