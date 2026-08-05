@@ -12,9 +12,10 @@ full_cmd = f'start "{window_title}" cmd /k wsl -d kali-linux -- bash -c "{kali_c
 
 subprocess.Popen(full_cmd, shell=True)
 '''
+def test():
+    global KEY
+    if KEY:
+        print("ERROR: .env file not found and keys are empty!")
+        exit()
 
-import subprocess
-client_proc = subprocess.Popen([
-                                "C:\\Program Files\\OpenVPN\\bin\\openvpn.exe",
-                                    "--config", "C:\\Users\\magar\\Desktop\\1000101\\NIR\\msi_openvpn_remote_access_l3.ovpn"
-                            ])
+test()

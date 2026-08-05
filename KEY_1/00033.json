@@ -1,0 +1,60 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x00UV_ASCLI_VER=3.8.0-4528\\x00UV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x00IV_GUI_VER=OCWindows_3.8.0-4528\\x00IV_SSO=webauth,crtext\\x00IV_HWADDR=00:d4:9e:a3:3e:b9\\x00\\x00", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-client\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00", "op": "i", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00%1000x%n%n%n", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [140, 300], "val": "41", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00;DROP TABLE users;--", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [140, 600], "val": "00", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [140, 600], "val": "ff", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00dev-type tun\\x00setenv PATH /bin/sh\\x00ifconfig 10.0.0.1 255.255.255.0\\x00", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00script-security 3\\x00up /etc/init.d/openvpn start\\x00", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00route 192.168.1.0 255.255.255.0 10.0.0.1\\x00ipcp-option request 10.0.0.2\\x00", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00ifconfig 10.0.0.1 10.0.0.2\\x00ping 10\\x00ping-restart 60\\x00", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00pull-filter ignore\\x00pull-filter ignore \\x00pull-filter ignore  \\x00", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00comp-lzo\\x00comp-lzo yes\\x00comp-lzo no\\x00", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00persist-key\\x00persist-tun\\x00ca /etc/openvpn/ca.crt\\x00cert /etc/openvpn/client.crt\\x00key /etc/openvpn/client.key\\x00", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": 140, "val": "dev-type tun,link-mtu 1557,tun-mtu 1500,proto UDPv4,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-clientVER=3.11.3\\x0aIV_PLAT=win\\x0aIV_NCP=2\\x0aIV_TCPNL=1\\x0aIV_PROTO=8094\\x0aIV_MTU=1600\\x0aIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\\x0aIV_SSL=OpenSSL 3.4.1 11 Feb 2025\\x0aUV_ASCLI_VER=3.8.0-4528\\x0aUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\\x0aIV_GUI_VER=OCWindows_3.8.0-4528\\x0aIV_SSO=webauth,crtext\\x0aIV_HWADDR=00:d4:9e:a3:3e:b9\\x0a\\x00", "op": "r", "size": "-"},
+    {"msg": "M17", "offset": 0, "val": "PUSH_REQUEST\\x00auth-nocache\\x00auth-retry interact\\x00explicit-exit-notify 1\\x00reneg-sec 3600\\x00", "op": "r", "size": "-"}
+  ]
+}

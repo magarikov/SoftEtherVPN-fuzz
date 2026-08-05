@@ -1,0 +1,62 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": [100, 300], "val": "41", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 140, "val": "IV_VER=3.11.3\nIV_PLAT=win\nIV_NCP=2\nIV_TCPNL=1\nIV_PROTO=8094\nIV_MTU=1600\nIV_CIPHERS=none:AES-128-CBC:AES-192-CBC:AES-256-CBC:DES-CBC:DES-EDE3-CBC:BF-CBC:AES-128-GCM:AES-192-GCM:AES-256-GCM:CHACHA20-POLY1305\nIV_SSL=OpenSSL 3.4.1 11 Feb 2025\nUV_ASCLI_VER=3.8.0-4528\nUV_UUID=F099534E-E4F7-B846-8BC9-395177F89AC7\nIV_GUI_VER=OCWindows_3.8.0-4528\nIV_SSO=webauth,crtext\nIV_HWADDR=00:d4:9e:a3:3e:b9\n", "op": "i", "size": "4096"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": [50, 450], "val": "41", "op": "r", "size": "8192"},
+    {"msg": "M9", "offset": 200, "val": "AAAAAABBBBBBCCCCCCDDDDDDEEEEEEEFFFFFFFGGGGGGHHHHHHIIIIIIJJJJJJKKKKKKLLLLLLMMMMMMNNNNNNOOOOOOPPPPPQQQQQQRRRRRRSSSSSSTTTTTTUUUUUUVVVVVVWWWWWWXXXXXXYYYYYYZZZZZZ", "op": "i", "size": "8192"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": [20, 600], "val": "42", "op": "r", "size": "16384"},
+    {"msg": "M9", "offset": 80, "val": "OVERFLOW_TEST_STRING_LONG_DATA_SEQUENCE_TO_TRIGGER_HEAP_EXHAUSTION_BUFFER_ALLOCATION_BUG_1234567890ABCDEF", "op": "i", "size": "16384"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": [10, 500], "val": "25", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 110, "val": "IV_CUSTOM_PARAM=AAAAAABBBBBBCCCCCCDDDDDD\nIV_CUSTOM_PARAM2=EEEEEEFFFFFFGGGGGGHHHHHH\n", "op": "i", "size": "4096"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": [15, 620], "val": "63", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 30, "val": "CLIENT_VERSION_HUGE_OVERFLOW_STRING_ATTEMPT_WITH_FORMAT_SPECIFIERS_%s_%x_%n_%p_%s_%x", "op": "i", "size": "4096"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": [80, 200], "val": "00", "op": "r", "size": "8192"},
+    {"msg": "M9", "offset": 90, "val": "IV_EXTRA_LARGE_STRING_BUFFER_ATTACK_VECTOR_SEQUENCE_FOR_MEMORY_CORRUPTION_TESTING_EXHAUSTION", "op": "i", "size": "8192"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": [5, 650], "val": "41", "op": "r", "size": "65535"},
+    {"msg": "M9", "offset": 50, "val": "RESERVED_FIELD_OVERFLOW_DATA_WITH_EXCESSIVE_LENGTH_PARAMETERS_ALLOCATION_FAIL", "op": "i", "size": "65535"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": [100, 400], "val": "58", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 120, "val": "PARAM_VALUE_EXTREMELY_LONG_STRING_THAT_EXCEEDS_NORMAL_BUFFER_BOUNDS_AND_FORCES_REALLOC", "op": "i", "size": "4096"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": [1, 653], "val": "ff", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 10, "val": "CORRUPTED_PEER_INFO_STRING_BLOCK_WITH_INVALID_NULL_TERMINATION_AND_LARGE_SIZE", "op": "i", "size": "4096"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": [200, 500], "val": "00", "op": "r", "size": "8192"},
+    {"msg": "M9", "offset": 250, "val": "NESTED_STRING_VECTOR_OVERFLOW_TEST_DATA_TO_BREAK_DYNAMIC_PARSER_ALLOCATION", "op": "i", "size": "8192"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": [50, 350], "val": "41", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 75, "val": "MALFORMED_ENVIRONMENT_VARIABLES_LIST_WITH_HUGE_KEY_VALUE_PAIRS_FOR_HEAP_CORRUPTION", "op": "i", "size": "4096"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": [10, 600], "val": "61", "op": "r", "size": "16384"},
+    {"msg": "M9", "offset": 150, "val": "BUFFER_OVERFLOW_TEST_CASE_M9_PAYLOAD_WITH_EXTREME_SIZE_MODIFIER_EXHAUSTION", "op": "i", "size": "16384"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": [30, 400], "val": "42", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 60, "val": "STRING_BUFFER_OVERFLOW_IN_CLIENT_VERSION_OR_PEER_INFO_PARSING_ROUTINE", "op": "i", "size": "4096"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": [15, 550], "val": "58", "op": "r", "size": "8192"},
+    {"msg": "M9", "offset": 100, "val": "EXCESSIVE_DATA_PAYLOAD_WITHOUT_PROPER_BOUNDS_CHECKING_FOR_MEMORY_EXHAUSTION", "op": "i", "size": "8192"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": [5, 600], "val": "00", "op": "r", "size": "4096"},
+    {"msg": "M9", "offset": 40, "val": "FINAL_MEMORY_EXHAUSTION_TEST_CASE_WITH_MAXIMUM_POSSIBLE_ALLOCATION_SIZE", "op": "i", "size": "4096"}
+  ]
+}

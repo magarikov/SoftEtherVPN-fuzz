@@ -1,0 +1,49 @@
+{
+  "S1": [
+    {"msg": "M3", "offset": 30, "val": "41", "op": "i", "size": "319"},
+    {"msg": "M3", "offset": 31, "val": "41", "op": "i", "size": "319"}
+  ],
+  "S2": [
+    {"msg": "M3", "offset": 100, "val": "41414141414141414141", "op": "i", "size": "319"}
+  ],
+  "S3": [
+    {"msg": "M3", "offset": 50, "val": "42424242424242424242424242424242", "op": "i", "size": "319"}
+  ],
+  "S4": [
+    {"msg": "M3", "offset": 200, "val": "534f465445544845525f4f56504e", "op": "i", "size": "319"}
+  ],
+  "S5": [
+    {"msg": "M3", "offset": 10, "val": "4141414141414141414141414141414141414141", "op": "i", "size": "319"}
+  ],
+  "S6": [
+    {"msg": "M3", "offset": 300, "val": "0000000000000000", "op": "i", "size": "319"}
+  ],
+  "S7": [
+    {"msg": "M3", "offset": 80, "val": "deadbeefdeadbeefdeadbeefdeadbeef", "op": "i", "size": "319"}
+  ],
+  "S8": [
+    {"msg": "M3", "offset": 150, "val": "4142434445464748494a4b4c4d4e4f50", "op": "i", "size": "319"}
+  ],
+  "S9": [
+    {"msg": "M3", "offset": 25, "val": "ff", "op": "i", "size": "319"},
+    {"msg": "M3", "offset": 26, "val": "ff", "op": "i", "size": "319"}
+  ],
+  "S10": [
+    {"msg": "M3", "offset": 10, "val": "585858585858585858585858", "op": "i", "size": "319"}
+  ],
+  "S11": [
+    {"msg": "M3", "offset": 40, "val": "cccccccccccccccccccccccccccccccc", "op": "i", "size": "319"}
+  ],
+  "S12": [
+    {"msg": "M3", "offset": 60, "val": "dddddddddddddddddddddddddddddddd", "op": "i", "size": "319"}
+  ],
+  "S13": [
+    {"msg": "M3", "offset": 120, "val": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "op": "i", "size": "319"}
+  ],
+  "S14": [
+    {"msg": "M3", "offset": 180, "val": "ffffffffffffffffffffffffffffffff", "op": "i", "size": "319"}
+  ],
+  "S15": [
+    {"msg": "M3", "offset": 14, "val": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "op": "i", "size": "319"}
+  ]
+}

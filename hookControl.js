@@ -18,7 +18,7 @@ setTimeout(function() {
                 onEnter: function (args) {
                     console.log("OvsProcessRecvControlPacket called!");
                     
-                    var mutation = JSON.parse(new File("/mnt/c/Users/magar/Desktop/1000101/NIR/cur_mutation.json", "r").readText());
+                    var mutation = JSON.parse(new File("/mnt/c/Users/magar/Desktop/1000101/NIR/data/cur_mutation.json", "r").readText());
                     
 
                     try {

@@ -3,7 +3,6 @@
 
 cat > .gitignore << EOF
 SoftEtherVPNtest/
-KEY_1/
 
 *.log
 *.tmp

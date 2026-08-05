@@ -226,11 +226,10 @@ def init():
         GEMINI_KEY = os.getenv("GEMINI_KEY")
         OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
     else:
-        if GEMINI_KEY == "" or OPENROUTER_KEY == "":
-            print("ERROR: .env file not found and keys are empty!")
-            exit()
+        print("ERROR: .env file not found and keys are empty!")
+        exit()
 
-    prompt_path = "промт 12000.txt"
+    prompt_path = "data/промт 12000.txt"
     if not os.path.exists(prompt_path):
         print(f"ERROR: file {prompt_path} not found!")
         exit()

@@ -1,0 +1,62 @@
+{
+  "S1": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "41414141414141414141414141414141", "op": "i", "size": "4096"}
+  ],
+  "S2": [
+    {"msg": "M6", "offset": 9, "val": "fe", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "ffffffffffffffff", "op": "i", "size": "65535"}
+  ],
+  "S3": [
+    {"msg": "M6", "offset": 9, "val": "80", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "00000000ffffffff", "op": "i", "size": "1000000"}
+  ],
+  "S4": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "deadbeefdeadbeef", "op": "i", "size": "2147483648"}
+  ],
+  "S5": [
+    {"msg": "M6", "offset": 9, "val": "7f", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "53535353535353535353535353535353", "op": "i", "size": "32768"}
+  ],
+  "S6": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": [10, 50], "val": "90", "op": "r", "size": "4294967295"}
+  ],
+  "S7": [
+    {"msg": "M6", "offset": 9, "val": "10", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "ffffff7fffffff7f", "op": "i", "size": "1024"}
+  ],
+  "S8": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "01000000020000000300000004000000", "op": "i", "size": "5000"}
+  ],
+  "S9": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "ffffffff00000000ffffffff00000000", "op": "i", "size": "65536"}
+  ],
+  "S10": [
+    {"msg": "M6", "offset": 9, "val": "fe", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": [10, 100], "val": "ff", "op": "r", "size": "1048576"}
+  ],
+  "S11": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "42424242424242424242424242424242", "op": "i", "size": "131072"}
+  ],
+  "S12": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f", "op": "i", "size": "262144"}
+  ],
+  "S13": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "123456789abcdef0123456789abcdef0", "op": "i", "size": "524288"}
+  ],
+  "S14": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": 10, "val": "ffffffffffffffffffffffffffffffff", "op": "i", "size": "2097152"}
+  ],
+  "S15": [
+    {"msg": "M6", "offset": 9, "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M6", "offset": [10, 200], "val": "00", "op": "r", "size": "8388608"}
+  ]
+}

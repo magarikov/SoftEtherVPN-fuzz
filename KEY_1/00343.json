@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 128, "val": "%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": [120, 150], "val": "%n%n%n%n%n%n%n%n%n%n%n%n", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": 135, "val": "%08x.%08x.%08x.%08x.%08x.%08x", "op": "i", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": [110, 160], "val": "AAAA%s%p%x%n", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": 140, "val": "%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": 125, "val": "%%20%%20%%20%%n%%n%%n", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": [115, 175], "val": "%100000d%100000d%n", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": 130, "val": "%s%s%s%s%s%s%p%p%p%p%x%x%x%x", "op": "i", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": [100, 180], "val": "%d.%d.%d.%d.%d.%d.%d.%d.%n", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": 145, "val": "user_%08x_%08x_%n", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": [120, 140], "val": "%.1024d%.1024d%.1024d", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 135, "val": "%2$s%1$s%3$s%4$s", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": [110, 190], "val": "%s_%s_%s_%s_%s_%s_%s_%s_%s_%s_%s", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": 125, "val": "%x-%x-%x-%x-%x-%x-%x-%x-%x", "op": "i", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": [105, 195], "val": "%n%s%p%x%n%s%p%x%n%s%p%x", "op": "r", "size": "-"}
+  ]
+}

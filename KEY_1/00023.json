@@ -1,0 +1,122 @@
+{
+  "S1": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "00", "op": "i", "size": "-"}
+   ],
+   "S2": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48656c6c6f20576f726c64", "op": "i", "size": "-"}
+   ],
+   "S3": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "46557368436f6e6576696e", "op": "i", "size": "-"}
+   ],
+   "S4": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "415355434852454e47494e", "op": "i", "size": "-"}
+   ],
+   "S5": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "74657374696e676b6579", "op": "i", "size": "-"}
+   ],
+   "S6": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "707573682072657175657374", "op": "i", "size": "-"}
+   ],
+   "S7": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "7365637572656b657973", "op": "i", "size": "-"}
+   ],
+   "S8": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "746f6b656e7365637572", "op": "i", "size": "-"}
+   ],
+   "S9": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "736563757265746f6b656e", "op": "i", "size": "-"}
+   ],
+   "S10": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "746f6b656e7365637572", "op": "i", "size": "-"}
+   ],
+   "S11": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "414c4c4f5769646f776e", "op": "i", "size": "-"}
+   ],
+   "S12": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c505553482052", "op": "i", "size": "-"}
+   ],
+   "S13": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "55534450555348205245", "op": "i", "size": "-"}
+   ],
+   "S14": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48456c6c6f20576f726c", "op": "i", "size": "-"}
+   ],
+   "S15": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c5055534820", "op": "i", "size": "-"}
+   ],
+   "S16": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "555344505553482052", "op": "i", "size": "-"}
+   ],
+   "S17": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48456c6c6f20576f72", "op": "i", "size": "-"}
+   ],
+   "S18": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c505553482", "op": "i", "size": "-"}
+   ],
+   "S19": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "55534450555348205", "op": "i", "size": "-"}
+   ],
+   "S20": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48456c6c6f20576f", "op": "i", "size": "-"}
+   ],
+   "S21": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c50555348", "op": "i", "size": "-"}
+   ],
+   "S22": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "5553445055534820", "op": "i", "size": "-"}
+   ],
+   "S23": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48456c6c6f2057", "op": "i", "size": "-"}
+   ],
+   "S24": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c5055534", "op": "i", "size": "-"}
+   ],
+   "S25": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "555344505553482", "op": "i", "size": "-"}
+   ],
+   "S26": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48456c6c6f20", "op": "i", "size": "-"}
+   ],
+   "S27": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c505553", "op": "i", "size": "-"}
+   ],
+   "S28": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "55534450555348", "op": "i", "size": "-"}
+   ],
+   "S29": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48456c6c6f", "op": "i", "size": "-"}
+   ],
+   "S30": [
+       {"msg": "M3", "offset": [26, 250], "val": "", "op": "d", "size": "-"},
+       {"msg": "M3", "offset": 26, "val": "48544d4c5055", "op": "i", "size": "-"}
+   ]
+}

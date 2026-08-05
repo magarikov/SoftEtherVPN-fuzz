@@ -22,7 +22,7 @@ setTimeout(function() {
                     //var p = args[1]; // Это адрес начала структуры UDPPACKET
                     //console.log(hexdump(args[1], { length: 128, header: false, ansi: true }));
                     //console.log("\n\n");
-                    var mutation = JSON.parse(new File("/mnt/c/Users/magar/Desktop/1000101/NIR/cur_mutation.json", "r").readText());
+                    var mutation = JSON.parse(new File("/mnt/c/Users/magar/Desktop/1000101/NIR/data/cur_mutation.json", "r").readText());
                     
                     var p = args[1]; // Указатель на UDPPACKET
                     if (p.isNull()) return;

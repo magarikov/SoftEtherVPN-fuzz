@@ -1,0 +1,62 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": [128, 256], "val": "41", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [300, 450], "val": "41", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": [150, 200], "val": "42", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [400, 500], "val": "43", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": [110, 220], "val": "90", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [320, 480], "val": "90", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": [135, 270], "val": "cc", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [280, 510], "val": "cc", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": [120, 240], "val": "ff", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [310, 490], "val": "ff", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": [125, 235], "val": "00", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [305, 475], "val": "00", "op": "r", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": [140, 260], "val": "41424344", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [290, 460], "val": "41424344", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": [130, 250], "val": "55AA", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [300, 500], "val": "55AA", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": [115, 225], "val": "deadbeef", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [315, 485], "val": "deadbeef", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": [105, 215], "val": "7f", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [325, 495], "val": "7f", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": [145, 265], "val": "25732573", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [295, 465], "val": "25732573", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": [132, 248], "val": "256e256e", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [302, 472], "val": "256e256e", "op": "r", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": [118, 238], "val": "0a0a0a0a", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [308, 488], "val": "0a0a0a0a", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": [122, 242], "val": "ffffffff", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [312, 492], "val": "ffffffff", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": [126, 256], "val": "7e", "op": "r", "size": "-"},
+    {"msg": "M9", "offset": [296, 496], "val": "7e", "op": "r", "size": "-"}
+  ]
+}

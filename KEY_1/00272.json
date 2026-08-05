@@ -1,0 +1,47 @@
+{
+  "S1": [
+    {"msg": "M9", "offset": 60, "val": "tun-mtu 999999999,link-mtu 999999999", "op": "r", "size": "-"}
+  ],
+  "S2": [
+    {"msg": "M9", "offset": 70, "val": "proto TCP-server,cipher NOT_A_CIPHER", "op": "r", "size": "-"}
+  ],
+  "S3": [
+    {"msg": "M9", "offset": 80, "val": "auth INVALID_AUTH_ALG,keysize 4294967295", "op": "r", "size": "-"}
+  ],
+  "S4": [
+    {"msg": "M9", "offset": 90, "val": "key-method 999,tls-server", "op": "r", "size": "-"}
+  ],
+  "S5": [
+    {"msg": "M9", "offset": 60, "val": "%s%s%s%s%s%s%s%s%s%s", "op": "r", "size": "-"}
+  ],
+  "S6": [
+    {"msg": "M9", "offset": 100, "val": "AOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVLOVL", "op": "i", "size": "-"}
+  ],
+  "S7": [
+    {"msg": "M9", "offset": [60, 120], "val": "41", "op": "r", "size": "-"}
+  ],
+  "S8": [
+    {"msg": "M9", "offset": 65, "val": "script-security 3,up /bin/sh", "op": "r", "size": "-"}
+  ],
+  "S9": [
+    {"msg": "M9", "offset": 75, "val": "plugin /usr/lib/malicious.so", "op": "r", "size": "-"}
+  ],
+  "S10": [
+    {"msg": "M9", "offset": 85, "val": "ping 0,ping-restart 0", "op": "r", "size": "-"}
+  ],
+  "S11": [
+    {"msg": "M9", "offset": 95, "val": "route 0.0.0.0 0.0.0.0 net_gateway", "op": "r", "size": "-"}
+  ],
+  "S12": [
+    {"msg": "M9", "offset": 55, "val": ";;;CRITICAL_OVERFLOW_DIRECTIVE;;;", "op": "i", "size": "-"}
+  ],
+  "S13": [
+    {"msg": "M9", "offset": 70, "val": "invalid-option-directive-without-space", "op": "r", "size": "-"}
+  ],
+  "S14": [
+    {"msg": "M9", "offset": [50, 150], "val": "00", "op": "r", "size": "-"}
+  ],
+  "S15": [
+    {"msg": "M9", "offset": 60, "val": "redirect-gateway def1 bypass-dhcp", "op": "r", "size": "-"}
+  ]
+}
