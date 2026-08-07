@@ -11,6 +11,21 @@
 вместе с мутацией, которая вызвала новое покрытие.
 */
 
+function readEnv() {
+    
+    let file = new File(".env", "r");
+    let envData = file.readText();
+    file.close();  
+    let pathIndex = envData.indexOf("KALI_DIR=");
+    let path;
+    if (pathIndex !== -1) {
+        pathIndex += "KALI_DIR=".length;
+        let endOfLineIndex = envData.indexOf('\n', pathIndex);
+        path = envData.substring(pathIndex, endOfLineIndex)
+    }
+    return path;
+}
+
 function processCoverage(stalkerEvents, curMutationPath, dbPath, module) {
     if (!stalkerEvents || stalkerEvents.length < 2) {
         return false;
@@ -152,8 +167,10 @@ Interceptor.attach(funcPtr, {
         // [["START_ADDR", "END_ADDR"], ["START_ADDR2", "END_ADDR2"], ...]
 
         // the collected coverage can be returned to the fuzzer
-        let curMutationPath = "/mnt/c/Users/magar/Desktop/1000101/NIR/data/cur_mutation.json";
-        let dbPath = "/mnt/c/Users/magar/Desktop/1000101/NIR/data/edges.json"
+        let linuxPath = readEnv();
+        let curMutationPath = linuxPath + "/data/cur_mutation.json";
+        let dbPath = linuxPath + "/data/edges.json"
+ 
         processCoverage(stalker_events, curMutationPath, dbPath, module);
     }
 });

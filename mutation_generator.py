@@ -24,8 +24,8 @@ import requests
 import json
 import random
 
-
 instructions = [
+
         # Вектор 1: Ломание конечного автомата
         "Generate 15 unique mutation sequences focusing on sending out-of-order packets. Mutate offset 0 of message M3 to replace the valid control opcode with data packet opcodes or server-side opcodes like 8 or 9 to trigger early resource allocation. Return data in strictly valid JSON format.",
         "Generate 15 unique mutation sequences to bypass early initialization. Forcefully mutate the MySessionId field at offset 1 in message M1 to match an already active session id or a series of dead session IDs to test state hijacking. Return data in strictly valid JSON format.",
@@ -55,6 +55,13 @@ instructions = [
         "Generate 15 unique mutation sequences looking for format leaks in channel error handling. In message M3, inject percentage symbols and format characters into the client_hello extension payload to test if the string is mistakenly evaluated as a direct argument during error string generation. Return data in strictly valid JSON format."
     ]
 
+newCovMutation = []
+instructionNewCov = { 
+    f"The payload mutation `` expanded coverage by reaching new code execution paths on the server. "
+    f"Analyze the structure of this payload and infer why it was accepted or triggered new logic. "
+    f"Generate a follow-up payload mutation to explore deeper server behavior based on this new path. "
+    f"Provide your response containing the base mutation and your newly generated follow-up mutation."
+}
 # список доступных моделей (в ходе работы может уменьшаться, если модели недоступны)
 models = ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.6-flash', 'gemini-3.5-flash',
            'gemini-2.5-pro', 'nvidia/nemotron-nano-12b-v2-vl:free', 'inclusionai/ling-3.0-flash:free']
@@ -144,13 +151,78 @@ def makeRequest(model, temp, user_instruction, system_instruction_text):
 
     return response
 
+#возвращает список пакетов, которые вызвали новое покрытие (новые адреса в edges.json)
+def findNewCovMutation():
+    newCovMutation = []
+    try:
+        with open("data/edges.json", "r", encoding="utf-8") as f:
+            edges = json.load(f)
+            for i in edges:
+                # если это не стандартный пакет, а мутация, которая вызвала новое покрытие
+                if edges[i].curMutation != []:
+                    newCovMutation.append(edges[i].curMutation)   
+            return newCovMutation              
+    except Exception as e:
+        print(f"ERROR: {e}")
 
+# счетчики - [in, out], остальное - [in]
+def generateNewFile(global_counter, global_counter_backup, model, index, user_instruction, system_instruction_text):
 
-def run_fuzzing_generation(prompt_file_path, output_dir="KEY_1", output_dir_backup="KEY_backup"):
+    output_dir="KEY_1"
+    output_dir_backup="KEY_backup"
+
+    # Имя файла на основе счетчика: 00000.json, 00001.json, 00020.json и т.д.
+    filename = f"{global_counter:05d}.json"
+    filepath = os.path.join(output_dir, filename)
+    filename_backup = f"{global_counter_backup:05d}.json"
+    filepath_backup = os.path.join(output_dir_backup, filename_backup)
+    
+    # пропускаем, если файл с таким именем уже есть
+    while os.path.exists(filepath):
+        global_counter += 1
+        filename = f"{global_counter:05d}.json"
+        filepath = os.path.join(output_dir, filename)
+        
+    while os.path.exists(filepath_backup):
+        global_counter_backup += 1
+        filename_backup = f"{global_counter_backup:05d}.json"
+        filepath_backup = os.path.join(output_dir_backup, filename_backup)
+
+    print(f"\n Обработка запроса для {filename}...")
+
+    try:
+        temperature = random.randint(50, 140) / 100
+        json_data = makeRequest(model, temperature, user_instruction, system_instruction_text)
+
+        # Сохраняем в файл
+        with open(filepath, "w", encoding="utf-8") as out_file:
+            out_file.write(json_data)
+        with open(filepath_backup, "w", encoding="utf-8") as out_file:
+            out_file.write(json_data)
+        
+        print(f"Создан файл: {filepath}")
+
+        with open(f"{output_dir_backup}/info.txt", "a+") as f:
+            f.write(f"\n{filename_backup} {index} {temperature:0.2f} {model}")
+
+        # увеличиваем счетчик файлов
+        global_counter += 1
+        global_counter_backup += 1
+
+        return global_counter, global_counter_backup
+
+    except Exception as e:
+        try:
+            if (e.code == 429) or ('429' in e.message): # если исчерпали лимит запросов
+                models.remove(model) # удаляем модель из списка доступных
+        except Exception as e2:  
+            pass
+        print(f"ERROR: Ошибка на запросе {index} ({filename}): {e}")
+        print("Skipping...")
+
+def run_fuzzing_generation(prompt_file_path):
 
     # готовим пространство, загружаем промт
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
     with open(prompt_file_path, "r", encoding="utf-8") as f:
         system_instruction_text = f.read()
 
@@ -168,54 +240,21 @@ def run_fuzzing_generation(prompt_file_path, output_dir="KEY_1", output_dir_back
     Плюс к этому, во второй папке хранится информация по всем генерациям (какой моделью
     сгенерирован файл, с какой температурой...)
     '''
+
     while (1):
+        # цикл по инструкциям для новых покрытий
+        newCovMutation = findNewCovMutation()
+        for mutation in newCovMutation:
+            for model in models:
+                user_instruction = instructionNewCov.insert(22, mutation)
+                global_counter, global_counter_backup = generateNewFile(global_counter, global_counter_backup, model, "newCov", user_instruction, system_instruction_text)
+                # Небольшая пауза, чтобы не выйти за лимиты
+                time.sleep(15)
+                
+        # цикл по обычным инструкциям
         for index, user_instruction in enumerate(instructions):
             for model in models:
-                
-                # Имя файла на основе счетчика: 00000.json, 00001.json, 00020.json и т.д.
-                filename = f"{global_counter:05d}.json"
-                filename_backup = f"{global_counter_backup:05d}.json"
-                filepath = os.path.join(output_dir, filename)
-                filepath_backup = os.path.join(output_dir_backup, filename_backup)
-                
-                # пропускаем, если файл с таким именем уже есть
-                if os.path.exists(filepath):
-                    global_counter += 1
-                    break # переходим к следующей итерации ПО INSTRUCTIONS
-                while os.path.exists(filepath_backup):
-                    global_counter_backup += 1
-                    filename_backup = f"{global_counter_backup:05d}.json"
-                    filepath_backup = os.path.join(output_dir_backup, filename_backup)
-
-                print(f"\n Обработка запроса для {filename}...")
-
-                try:
-                    temperature = random.randint(50, 140) / 100
-                    json_data = makeRequest(model, temperature, user_instruction, system_instruction_text)
-
-                    # Сохраняем в файл
-                    with open(filepath, "w", encoding="utf-8") as out_file:
-                        out_file.write(json_data)
-                    with open(filepath_backup, "w", encoding="utf-8") as out_file:
-                        out_file.write(json_data)
-                    
-                    print(f"Создан файл: {filepath}")
-
-                    with open(f"{output_dir_backup}/info.txt", "a+") as f:
-                        f.write(f"\n{filename_backup} {index} {temperature:0.2f} {model}")
-
-                    # увеличиваем счетчик файлов
-                    global_counter += 1
-
-                except Exception as e:
-                    try:
-                        if (e.code == 429) or ('429' in e.message): # если исчерпали лимит запросов
-                            models.remove(model) # удаляем модель из списка доступных
-                    except Exception as e2:  
-                        pass
-                    print(f"ERROR: Ошибка на запросе {index} ({filename}): {e}")
-                    print("Skipping...")
-
+                global_counter, global_counter_backup = generateNewFile(global_counter, global_counter_backup, model, index, user_instruction, system_instruction_text)
                 # Небольшая пауза, чтобы не выйти за лимиты
                 time.sleep(15)
 
